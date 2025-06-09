@@ -1,0 +1,34 @@
+{
+  "enemies": [
+    {
+      "id": "tigaress",
+      "name": "Tigaress",
+      "health": 100,
+      "speed": 1,
+      "damage": 10,
+      "attackRate": 1000,
+      "sprite": "assets/sprites/enemies/tigaress.png",
+      "description": "A swift and mystical tiger spirit. Fast and light."
+    },
+    {
+      "id": "barkbeast",
+      "name": "Barkbeast",
+      "health": 200,
+      "speed": 0.5,
+      "damage": 20,
+      "attackRate": 1500,
+      "sprite": "assets/sprites/enemies/barkbeast.png",
+      "description": "Heavy and tough forest creature. Slow but strong."
+    },
+    {
+      "id": "shadeweaver",
+      "name": "Shadeweaver",
+      "health": 80,
+      "speed": 2,
+      "damage": 5,
+      "attackRate": 800,
+      "sprite": "assets/sprites/enemies/shadeweaver.png",
+      "description": "A shadowy spirit that moves quickly and weakens defenses."
+    }
+  ]
+}

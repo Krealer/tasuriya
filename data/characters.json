@@ -1,0 +1,26 @@
+{
+  "characters": [
+    {
+      "id": "sarah",
+      "name": "Sarah",
+      "cost": 25,
+      "sprite": "assets/sprites/characters/sarah.png",
+      "shoots": false,
+      "generatesEnergy": true,
+      "energyRate": 7000,
+      "projectile": null,
+      "description": "A gentle spirit who produces energy orbs over time."
+    },
+    {
+      "id": "stormelle",
+      "name": "Stormelle",
+      "cost": 50,
+      "sprite": "assets/sprites/characters/stormelle.png",
+      "shoots": true,
+      "generatesEnergy": false,
+      "attackRate": 1500,
+      "projectile": "assets/sprites/ui/stormelle_shot.png",
+      "description": "A fierce elemental who attacks enemies with lightning bolts."
+    }
+  ]
+}

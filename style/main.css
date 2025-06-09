@@ -1,0 +1,151 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1b1b2f;
+  font-family: 'Verdana', sans-serif;
+  color: #fff;
+  image-rendering: pixelated;
+  overflow: hidden;
+}
+
+/* ========== GAME CONTAINER ========== */
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* ========== UI BAR (Energy) ========== */
+#ui {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #2e2e48;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
+
+#ui img {
+  width: 32px;
+  height: 32px;
+}
+
+#energy-count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ========== CHARACTER SELECTION BAR ========== */
+#character-bar {
+  width: 90%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #2a2a42;
+  border: 2px solid #555;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.character-button {
+  width: 64px;
+  height: 64px;
+  background-color: #3a3a5a;
+  border: 2px solid #666;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.character-button:hover {
+  transform: scale(1.1);
+  border-color: #aaa;
+}
+
+.character-button img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+.character-button.selected {
+  outline: 2px solid #ffe600;
+}
+
+/* ========== GRID AREA ========== */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(9, 64px);
+  grid-template-rows: repeat(5, 64px);
+  gap: 2px;
+  background-color: #202035;
+  border: 2px solid #555;
+  padding: 4px;
+}
+
+/* ========== INDIVIDUAL CELLS ========== */
+.grid-cell {
+  width: 64px;
+  height: 64px;
+  background-color: #303050;
+  border: 1px solid #444;
+  position: relative;
+}
+
+.grid-cell img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+/* ========== PROJECTILES ========== */
+.projectile {
+  z-index: 10;
+}
+
+/* === VICTORY SCREEN OVERLAY === */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 40, 0.95);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-size: 2rem;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+#victory-screen button {
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ffe600;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

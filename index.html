@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasuriya</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+  <div id="game-container">
+
+    <!-- === UI BAR (Energy) === -->
+    <div id="ui">
+      <img id="energy-icon" src="assets/sprites/ui/energy_orb.png" alt="Energy Orb">
+      <span id="energy-count">50</span>
+    </div>
+
+    <!-- === CHARACTER SELECTION BAR === -->
+    <div id="character-bar">
+      <div class="character-button" data-char="sarah">
+        <img src="assets/sprites/characters/sarah.png" alt="Sarah">
+      </div>
+      <div class="character-button" data-char="stormelle">
+        <img src="assets/sprites/characters/stormelle.png" alt="Stormelle">
+      </div>
+    </div>
+
+    <!-- === GAME GRID === -->
+    <div id="grid"></div>
+
+    <!-- === BACKGROUND MUSIC === -->
+    <audio id="bgm" src="assets/sounds/bgm_lvl01.mp3" loop></audio>
+
+    <!-- === VICTORY SCREEN OVERLAY === -->
+    <div id="victory-screen" class="overlay hidden">
+      <h1>🎉 Victory!</h1>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- === GAME SCRIPTS (ORDER MATTERS) === -->
+  <script src="js/utils.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/characters.js"></script>
+  <script src="js/enemies.js"></script>
+  <script src="js/game.js"></script>
+
+  <!-- === CHARACTER SELECTION LOGIC === -->
+  <script>
+    const buttons = document.querySelectorAll('.character-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedId = button.dataset.char;
+        selectCharacter(selectedId);
+
+        // Highlight selected button
+        buttons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

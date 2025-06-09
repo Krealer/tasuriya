@@ -1,0 +1,27 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "Level 1 - The Awakening",
+      "background": "day",
+      "energyStart": 50,
+      "waves": [
+        {
+          "delayBefore": 3000,
+          "enemies": [
+            { "type": "tigaress", "row": 0, "spawnDelay": 0 },
+            { "type": "tigaress", "row": 1, "spawnDelay": 5000 },
+            { "type": "tigaress", "row": 2, "spawnDelay": 10000 },
+            { "type": "tigaress", "row": 3, "spawnDelay": 15000 },
+            { "type": "tigaress", "row": 4, "spawnDelay": 20000 },
+            { "type": "tigaress", "row": 1, "spawnDelay": 25000 },
+            { "type": "tigaress", "row": 3, "spawnDelay": 30000 },
+            { "type": "tigaress", "row": 0, "spawnDelay": 35000 },
+            { "type": "tigaress", "row": 2, "spawnDelay": 40000 },
+            { "type": "tigaress", "row": 4, "spawnDelay": 45000 }
+          ]
+        }
+      ]
+    }
+  ]
+}
