@@ -62,16 +62,6 @@ async function runLevel(levelData) {
   console.log(`Level ${levelData.id} complete — waiting for all enemies to be defeated.`);
 }
 
-/**
- * Shows the victory overlay
- */
-function showVictoryScreen() {
-  levelIsRunning = false;
-  const victory = document.getElementById("victory-screen");
-  if (victory) {
-    victory.classList.remove("hidden");
-  }
-}
 
 /**
  * Reloads the page to restart the game
